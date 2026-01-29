@@ -59,7 +59,7 @@ Validators run specialized software connected via API to AI models. This unifies
 
 ### Transaction Flow
 
-```
+```text
 User Transaction
       ↓
   GenLayer Network
@@ -79,16 +79,16 @@ User Transaction
   [Appeal?] → Expand validators, repeat
       ↓
   Final Decision → State Update
-```
+```text
 
 ### Validator Selection
 
 Token holders delegate tokens to validator candidates. A deterministic function `f(x)` randomly designates Leader and Validators for each transaction.
 
 **Selection weight formula:**
-```
+```text
 weight = (self_stake × ALPHA + delegated_stake) ^ BETA
-```
+```text
 Where:
 - ALPHA = 0.6 (self-stake counts 50% more)
 - BETA = 0.5 (square-root damping prevents whale dominance)
@@ -155,7 +155,7 @@ class MyContract(gl.Contract):
     @gl.public.write
     def increment(self):
         self.counter += u32(1)
-```
+```text
 
 ## Interoperability
 
@@ -164,7 +164,7 @@ class MyContract(gl.Contract):
 other = gl.get_contract_at(address)
 result = other.view().method_name()
 other.emit(on='finalized').update_status("active")
-```
+```text
 
 ### With EVM Contracts
 ```python
@@ -177,7 +177,7 @@ class TokenContract:
 
 token = TokenContract(address)
 balance = token.view().balance_of(owner)
-```
+```text
 
 ## Infrastructure Requirements
 

@@ -22,7 +22,7 @@ def resolve(self, event_data: str):
         equivalence="semantic_similarity > 0.9"
     )
     # Distribute winnings based on result
-```
+```text
 
 ---
 
@@ -55,7 +55,7 @@ def verify_delivery(self, proof_url: str, requirements: str):
     
     if result == "yes":
         gl.transfer(self.contractor, self.escrow_amount)
-```
+```text
 
 ---
 
@@ -88,7 +88,7 @@ def auto_rebalance(self):
     
     # Execute rebalancing
     self.execute_allocation(allocation)
-```
+```text
 
 ---
 
@@ -126,7 +126,7 @@ def resolve_dispute(self, claim: str, evidence_a: str, evidence_b: str):
     
     winner = self.parse_winner(result)
     self.distribute_funds(winner)
-```
+```text
 
 ---
 

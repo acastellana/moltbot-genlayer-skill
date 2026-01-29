@@ -92,7 +92,7 @@ Developers define equivalence criteria for each operation.
 
 ## Technical Architecture
 
-```
+```text
 ┌─────────────────────────────────────────────┐
 │                User/Agent                    │
 └──────────────────┬──────────────────────────┘
@@ -116,7 +116,7 @@ Developers define equivalence criteria for each operation.
 │         Ethereum (Settlement Layer)          │
 │              via ZKSync Rollup              │
 └─────────────────────────────────────────────┘
-```
+```text
 
 ## Use Cases
 

@@ -93,9 +93,9 @@ The system uses **shares** to track ownership:
 | **Stake** | Dynamic GEN amount; increases with rewards, decreases with slashing |
 
 ### Exchange Rate
-```
+```text
 stake_per_share = total_stake / total_shares
-```
+```text
 
 **Example:**
 - 100 shares representing 1,000 GEN (10 GEN/share)
@@ -108,9 +108,9 @@ stake_per_share = total_stake / total_shares
 
 Validators are selected for consensus based on weight:
 
-```
+```text
 weight = (self_stake × ALPHA + delegated_stake) ^ BETA
-```
+```text
 
 **Parameters:**
 - **ALPHA = 0.6**: Self-stake counts 50% more than delegated
@@ -166,12 +166,12 @@ staking.validatorJoin{value: 42000 ether}();
 
 // Option 2: Separate Operator (recommended)
 staking.validatorJoin{value: 42000 ether}(operatorAddress);
-```
+```text
 
 ### Depositing (additional stake)
 ```solidity
 validatorWallet.deposit{value: amount}();
-```
+```text
 
 ### Withdrawing
 ```solidity
@@ -185,7 +185,7 @@ staking.validatorExit(shares);
 
 // Step 4: Claim
 staking.validatorClaim();
-```
+```text
 
 ---
 
@@ -199,12 +199,12 @@ staking.delegatorJoin{value: 42 ether}(validatorWallet);
 // Multiple validators
 staking.delegatorJoin{value: 100 ether}(validator1);
 staking.delegatorJoin{value: 200 ether}(validator2);
-```
+```text
 
 ### Depositing (additional delegation)
 ```solidity
 staking.delegatorDeposit{value: amount}(validatorWallet);
-```
+```text
 
 ### Withdrawing
 ```solidity
@@ -218,7 +218,7 @@ staking.delegatorExit(validatorWallet, shares);
 
 // Step 4: Claim
 staking.delegatorClaim(delegator, validatorWallet);
-```
+```text
 
 **Note:** Exit each validator separately if delegating to multiple.
 
@@ -285,19 +285,19 @@ staking.delegatorClaim(delegator, validatorWallet);
 ## Activation Timelines
 
 ### Normal Epochs (2+)
-```
+```text
 Deposit in Epoch N → Active in Epoch N+2
-```
+```text
 
 ### Epoch 0 (Bootstrapping)
-```
+```text
 Deposit in Epoch 0 → Active in Epoch 2 (if meets minimums)
-```
+```text
 
 ### Unbonding
-```
+```text
 Exit in Epoch N → Claimable in Epoch N+7
-```
+```text
 
 ---
 
@@ -306,16 +306,16 @@ Exit in Epoch N → Claimable in Epoch N+7
 ### Validator Wizard
 ```bash
 genlayer staking wizard
-```
+```text
 
 ### Check Status
 ```bash
 genlayer staking status --validator <wallet>
-```
+```text
 
 ### Verify Configuration
 ```bash
 genlayer node doctor
-```
+```text
 
 Full CLI reference: https://docs.genlayer.com/api-references/genlayer-cli#staking-operations-testnet

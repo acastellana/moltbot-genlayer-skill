@@ -46,7 +46,7 @@ class MyContract(gl.Contract):
     def deposit(self):
         """Payable method - can receive value"""
         self.balances[gl.message.sender_address] += gl.message.value
-```
+```python
 
 ### Method Decorators
 | Decorator | Description |
@@ -67,7 +67,7 @@ class MyContract(gl.Contract):
     amount: u256
     owner: Address
     active: bool
-```
+```python
 
 ### DynArray (instead of `list`)
 ```python
@@ -77,7 +77,7 @@ class MyContract(gl.Contract):
     @gl.public.write
     def add_item(self, item: str):
         self.items.append(item)
-```
+```python
 
 ### TreeMap (instead of `dict`)
 ```python
@@ -87,7 +87,7 @@ class MyContract(gl.Contract):
     @gl.public.write
     def set_balance(self, addr: Address, amount: u256):
         self.balances[addr] = amount
-```
+```python
 
 ### Custom Storage Types
 ```python
@@ -99,7 +99,7 @@ class UserProfile:
 
 class MyContract(gl.Contract):
     profiles: TreeMap[Address, UserProfile]
-```
+```python
 
 ### Type Restrictions
 - Use `DynArray[T]` instead of `list[T]`
@@ -114,7 +114,7 @@ Copy storage objects to memory for non-deterministic operations:
 ```python
 # Copy to memory for processing
 data = self.storage_var.copy_to_memory()
-```
+```python
 
 ---
 
@@ -130,19 +130,19 @@ def get_balance(self) -> u256:
 def deposit(self):
     # self.balance automatically updated
     pass
-```
+```python
 
 ### Other Contract's Balance
 ```python
 other_balance = gl.get_balance(other_address)
-```
+```python
 
 ### Transferring Funds
 ```python
 @gl.public.write
 def withdraw(self, amount: u256, to: Address):
     gl.transfer(to, amount)
-```
+```python
 
 ---
 
@@ -164,7 +164,7 @@ class OtherContractIface:
 
 other = OtherContractIface(address)
 value = other.view().get_value()
-```
+```python
 
 ### Emitting Messages
 ```python
@@ -173,7 +173,7 @@ other.emit(on='accepted').update_status("pending")
 
 # Async message on finality
 other.emit(on='finalized').update_status("confirmed")
-```
+```python
 
 ### Deploying Contracts
 ```python
@@ -182,7 +182,7 @@ gl.deploy_contract(code=contract_code)
 
 # Deploy with salt (deterministic address)
 child_address = gl.deploy_contract(code=contract_code, salt=u256(1))
-```
+```python
 
 ### EVM Contracts
 ```python
@@ -197,7 +197,7 @@ class TokenContract:
 token = TokenContract(token_address)
 supply = token.view().total_supply()
 token.emit().transfer(receiver, u256(100))  # On finality only
-```
+```python
 
 ---
 
@@ -214,7 +214,7 @@ def analyze_text(self, text: str) -> str:
         equivalence="semantic_similarity > 0.9"
     )
     return result
-```
+```python
 
 ### Web Data Access
 ```python
@@ -224,7 +224,7 @@ def get_price(self, symbol: str) -> u256:
     data = gl.web.fetch(f"https://api.example.com/price/{symbol}")
     price = parse_price(data)
     return price
-```
+```python
 
 ### Vector Storage
 ```python
@@ -242,7 +242,7 @@ class SearchableContract(gl.Contract):
         # Find k most similar texts
         results = self.store.similarity_search(query, k=k)
         return results
-```
+```python
 
 ---
 
@@ -252,12 +252,12 @@ class SearchableContract(gl.Contract):
 ```python
 if condition_failed:
     gl.exit(1)  # Terminates execution immediately
-```
+```python
 
 ### UserError
 ```python
 raise gl.UserError("Insufficient balance")
-```
+```python
 
 ### Catching Errors
 ```python
@@ -266,7 +266,7 @@ try:
 except gl.UserError as e:
     # Handle user-generated error
     pass
-```
+```python
 
 ### VM Result Types
 - **Return**: Successful execution with encoded result
@@ -292,7 +292,7 @@ class Proxy(gl.Contract):
         code_vla = root.code.get()
         code_vla.truncate()  # Clear existing
         code_vla.extend(new_code)  # Put new code
-```
+```python
 
 - Empty locked upgraders list + frozen code slot = non-upgradable
 - Only addresses in upgraders list can modify frozen slots
@@ -312,7 +312,7 @@ gl.llm.complete(prompt, equivalence="semantic_similarity > 0.85")
 
 # Bad: No criteria (unreliable consensus)
 gl.llm.complete(prompt)
-```
+```python
 
 ### Testing
 - Test deterministic logic thoroughly
@@ -362,7 +362,7 @@ class PredictionMarket(gl.Contract):
                 self.points[addr] += u32(1)
         
         self.resolved = True
-```
+```python
 
 ---
 
