@@ -147,11 +147,11 @@ import genlayer as gl
 @gl.contract
 class MyContract(gl.Contract):
     counter: u32
-    
+
     @gl.public.view
     def get_counter(self) -> u32:
         return self.counter
-    
+
     @gl.public.write
     def increment(self):
         self.counter += u32(1)
