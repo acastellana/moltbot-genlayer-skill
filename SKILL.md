@@ -42,12 +42,12 @@ GenLayer is a decentralized protocol where multiple LLMs reach consensus on comp
 
 ## Key Links
 
-- **Docs:** https://docs.genlayer.com
-- **SDK:** https://sdk.genlayer.com
-- **GitHub:** https://github.com/genlayerlabs
-- **Discord:** https://discord.gg/8Jm4v89VAu
-- **Telegram:** https://t.me/genlayer
-- **Jury Theorem Simulator:** https://jury-theorem.genlayer.com
+- [Documentation](https://docs.genlayer.com)
+- [SDK](https://sdk.genlayer.com)
+- [GitHub](https://github.com/genlayerlabs)
+- [Discord](https://discord.gg/8Jm4v89VAu)
+- [Telegram](https://t.me/genlayer)
+- [Jury Theorem Simulator](https://jury-theorem.genlayer.com)
 
 ## Elevator Pitches
 
