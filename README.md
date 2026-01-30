@@ -1,27 +1,36 @@
-# GenLayer Skill
+# genlayer-clawdbot-skill
 
-A comprehensive knowledge base about GenLayer—the first AI-native blockchain for trustless decision-making.
+A Clawdbot skill for understanding and explaining GenLayer—the first AI-native blockchain for trustless decision-making.
+
+## Purpose
+
+This skill helps AI assistants explain GenLayer to:
+- Investors and partners
+- Developers exploring the ecosystem
+- Anyone curious about the protocol
+
+**For writing/deploying Intelligent Contracts**, use the companion skill: [genlayer-dev-clawdbot-skill](https://github.com/acastellana/genlayer-dev-clawdbot-skill)
 
 ## What's Inside
 
 | File | Description |
 |------|-------------|
-| `SKILL.md` | Quick reference, elevator pitches, when to load this skill |
+| `SKILL.md` | Quick reference, elevator pitches, when to use |
 | `overview.md` | What GenLayer is, how it works, why it matters |
 | `thesis.md` | The philosophical foundation: trust, AI, and mechanism design |
 | `architecture.md` | GenVM, validators, rollup integration, network parameters |
 | `consensus.md` | Optimistic Democracy, Equivalence Principle, appeals, slashing |
-| `intelligent-contracts.md` | Python developer guide with code examples |
+| `intelligent-contracts.md` | High-level concepts for developers |
 | `staking.md` | Validator/delegator economics and operations |
 | `use-cases.md` | Prediction markets, dispute resolution, AI DAOs |
 
 ## Quick Summary
 
-> **Bitcoin** is trustless money.
-> **Ethereum** is trustless apps.
+> **Bitcoin** is trustless money.  
+> **Ethereum** is trustless apps.  
 > **GenLayer** is trustless decision-making.
 
-GenLayer is a decentralized protocol where multiple LLMs reach consensus on complex tasks and decisions. It enables smart contracts ("Intelligent Contracts") to:
+GenLayer is a decentralized protocol where multiple LLMs reach consensus on complex tasks. Intelligent Contracts can:
 
 - Process natural language
 - Access real-time web data
@@ -30,22 +39,21 @@ GenLayer is a decentralized protocol where multiple LLMs reach consensus on comp
 
 All validated by multiple AI models using game theory to converge on truth.
 
-## Usage
+## Installation
 
-This skill is designed for AI assistants (like Clawdbot) to load when working on GenLayer-related tasks. Load the relevant file based on your needs:
+### Clawdbot
+```bash
+clawdbot skill add https://github.com/acastellana/genlayer-clawdbot-skill
+```
 
-- **Explaining GenLayer** → `overview.md`, `thesis.md`
-- **Technical questions** → `architecture.md`, `consensus.md`
-- **Development help** → `intelligent-contracts.md`
-- **Staking/economics** → `staking.md`
-- **Use case ideas** → `use-cases.md`
+### Manual
+Clone to your skills directory and reference in your agent config.
 
-## Links
+## Related
 
+- **Companion skill:** [genlayer-dev-clawdbot-skill](https://github.com/acastellana/genlayer-dev-clawdbot-skill) — For building contracts
 - **Docs:** https://docs.genlayer.com
 - **GitHub:** https://github.com/genlayerlabs
-- **Discord:** https://discord.gg/8Jm4v89VAu
-- **Telegram:** https://t.me/genlayer
 
 ## License
 
