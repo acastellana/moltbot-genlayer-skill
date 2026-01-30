@@ -1,6 +1,6 @@
-# genlayer-clawdbot-skill
+# genlayer-claw-skill
 
-A Clawdbot skill for understanding and explaining GenLayer—the first AI-native blockchain for trustless decision-making.
+A Claw skill for understanding and explaining GenLayer—the first AI-native blockchain for trustless decision-making.
 
 ## Purpose
 
@@ -9,7 +9,7 @@ This skill helps AI assistants explain GenLayer to:
 - Developers exploring the ecosystem
 - Anyone curious about the protocol
 
-**For writing/deploying Intelligent Contracts**, use the companion skill: [genlayer-dev-clawdbot-skill](https://github.com/acastellana/genlayer-dev-clawdbot-skill)
+**For writing/deploying Intelligent Contracts**, use the companion skill: [genlayer-dev-claw-skill](https://github.com/acastellana/genlayer-dev-claw-skill)
 
 ## What's Inside
 
@@ -43,7 +43,7 @@ All validated by multiple AI models using game theory to converge on truth.
 
 ### Clawdbot
 ```bash
-clawdbot skill add https://github.com/acastellana/genlayer-clawdbot-skill
+clawdbot skill add https://github.com/acastellana/genlayer-claw-skill
 ```
 
 ### Manual
@@ -51,7 +51,7 @@ Clone to your skills directory and reference in your agent config.
 
 ## Related
 
-- **Companion skill:** [genlayer-dev-clawdbot-skill](https://github.com/acastellana/genlayer-dev-clawdbot-skill) — For building contracts
+- **Companion skill:** [genlayer-dev-claw-skill](https://github.com/acastellana/genlayer-dev-claw-skill) — For building contracts
 - **Docs:** https://docs.genlayer.com
 - **GitHub:** https://github.com/genlayerlabs
 

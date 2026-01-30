@@ -1,6 +1,6 @@
 ---
-name: genlayer-clawdbot-skill
-description: Understand and explain GenLayer - the AI-native blockchain for trustless decision-making. Use for investor pitches, protocol explanations, architecture questions, consensus mechanics, positioning, and ecosystem discussions. Triggers: explain genlayer, what is genlayer, genlayer thesis, optimistic democracy, genlayer pitch. (For writing contracts, use genlayer-dev-clawdbot-skill instead.)
+name: genlayer-claw-skill
+description: Understand and explain GenLayer - the AI-native blockchain for trustless decision-making. Use for investor pitches, protocol explanations, architecture questions, consensus mechanics, positioning, and ecosystem discussions. Triggers: explain genlayer, what is genlayer, genlayer thesis, optimistic democracy, genlayer pitch. (For writing contracts, use genlayer-dev-claw-skill instead.)
 ---
 
 # GenLayer Knowledge Skill
@@ -16,7 +16,7 @@ GenLayer is a decentralized protocol where multiple LLMs reach consensus on comp
 - Ecosystem/product discussions
 - Pitch decks and positioning
 
-**For writing/deploying Intelligent Contracts** → use `genlayer-dev-clawdbot-skill`
+**For writing/deploying Intelligent Contracts** → use `genlayer-dev-claw-skill`
 
 ## Quick Reference
 
@@ -83,7 +83,7 @@ GenLayer enables a new class of applications that need trustless AI decision-mak
 
 ## Companion Skill
 
-**`genlayer-dev-clawdbot-skill`** — For actually building Intelligent Contracts:
+**`genlayer-dev-claw-skill`** — For actually building Intelligent Contracts:
 - SDK API reference
 - Code examples
 - CLI commands
