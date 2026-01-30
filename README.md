@@ -41,9 +41,9 @@ All validated by multiple AI models using game theory to converge on truth.
 
 ## Installation
 
-### Clawdbot
+### Claw CLI
 ```bash
-clawdbot skill add https://github.com/acastellana/genlayer-claw-skill
+claw skill add https://github.com/acastellana/genlayer-claw-skill
 ```
 
 ### Manual
